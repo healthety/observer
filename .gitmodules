@@ -1,0 +1,3 @@
+[submodule "lib/node-socket.io-client"]
+	path = lib/node-socket.io-client
+	url = https://github.com/saschagehlich/node-socket.io-client.git
