@@ -68,12 +68,18 @@ function writeStatusFile() {
     var host = hosts[i];
     var load = memo[i][typePostions['load_average']];
     var memory = memo[i][typePostions['memory']];
-    fileContent.push(
-      padStrRight(host + ':', 8) +
-      padStrLeft(load, 4) + ' / ' + memory
-    );
+    fileContent.push([
+      padStrRight(host + ':', 8),
+      padStrLeft(load, 4),
+      ' / ' + memory
+    ]);
   }
-  fs.writeFile('./status', fileContent.sort().join('\n'));
+  fileContent.sort( function(a, b) { return b[1] - a[1] } );
+  fileContentMerged = [];
+  for(var i in fileContent) {
+    fileContentMerged.push(fileContent[i].join(''))
+  }
+  fs.writeFile('./status', fileContentMerged.join('\n'));
 }
 
 function padStrRight(string, length) {
