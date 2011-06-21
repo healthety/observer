@@ -1,6 +1,6 @@
 # Healthety OSX Client
 
-This is a client for a Healthety Server written in javascript. CAUTION: its very messy!
+This is a client for a Healthety Server written in javascript.
 
 The client connects to the server and provides growl notifications if defined limits are exceeded. He also writes a status file which can be used for geektool.
 
@@ -8,32 +8,20 @@ The client connects to the server and provides growl notifications if defined li
 
 First of all you need to install [Node](https://github.com/joyent/node/wiki/Installation) and the packet manager [npm](https://github.com/isaacs/npm#readme).
 
-Then install Healthety by running:
+Then install Healthety OSX Client by running:
 
     $ git clone repo; cd repo
-    $ git submodule init; git submodule udpdate
+    $ git submodule init; git submodule update
     $ npm install growl
 
 ## Usage
 
-    var server = require('healthety');
-    server.run(
-      8124, // http server port
-      41234 // UDP server port
-    );
+Change the limits at the beginning of main.js to your needs and run the client with:
 
-Open http://localhost:8124 in your browser.
+    $ ./main.js
 
-To report data you can use our worker. Currently there is a [Ruby](https://github.com/healthety/ruby_worker) and [PHP](https://github.com/healthety/php_worker) worker. We'll publish very soon a JavaScript worker library.
+## Geektool
 
-## Basic Auth
+Create a command geeklet and paste the following command:
 
-Optional you can use basic auth to protect your reports.
-
-    var server = require('healthety');
-    server.run(
-      8124, // http server port
-      41234, // UDP server port,
-      {basicAuth: {user: 'admin', pass: 'secret'}}
-    );
-
+    cat $FOLDER/status
