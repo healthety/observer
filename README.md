@@ -23,6 +23,6 @@ Change the limits at the beginning of main.js to your needs and run the client w
 
 ## Geektool
 
-Create a command geeklet and paste the following command:
+Create a shell geeklet and paste the following command:
 
     cat /path/to/osx_growl_geektool_client/status
