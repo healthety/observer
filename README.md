@@ -8,10 +8,11 @@ The client connects to the server and provides growl notifications if defined li
 
 First of all you need to install [Node](https://github.com/joyent/node/wiki/Installation) and the packet manager [npm](https://github.com/isaacs/npm#readme).
 
-Then install Healthety OSX Client by running:
+Then install by running:
 
-    $ git clone repo; cd repo
+    $ git clone git://github.com/healthety/osx_growl_geektool_client.git; cd osx_growl_geektool_client
     $ git submodule init; git submodule update
+    $ cd lib/node-socket.io-client; git submodule init; git submodule update; cd ../..
     $ npm install growl
 
 ## Usage
@@ -24,4 +25,4 @@ Change the limits at the beginning of main.js to your needs and run the client w
 
 Create a command geeklet and paste the following command:
 
-    cat $FOLDER/status
+    cat /path/to/osx_growl_geektool_client/status
