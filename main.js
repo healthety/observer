@@ -4,7 +4,7 @@
 var limits = { '.*': [8, 12000] };
 
 // configure socket Endpoint
-var socketEndpoint = 'fubar';
+var socketEndpoint = 'overminda.kaeuferportal.eu';
 
 var fs = require('fs');
 var io = require("./lib/node-socket.io-client/socket.io").io;

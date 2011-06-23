@@ -17,7 +17,7 @@ Then install by running:
 
 ## Usage
 
-Change the limits at the beginning of main.js to your needs and run the client with:
+Configure the limits and the socket endpoint at the beginning of main.js to your needs and run the client with:
 
     $ ./main.js
 
