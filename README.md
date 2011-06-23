@@ -10,7 +10,7 @@ First of all you need to install [Node](https://github.com/joyent/node/wiki/Inst
 
 Then install by running:
 
-    $ git clone git://github.com/healthety/osx_growl_geektool_client.git; cd osx_growl_geektool_client
+    $ git clone git://github.com/healthety/observer.git; cd observer
     $ git submodule init; git submodule update
     $ cd lib/node-socket.io-client; git submodule init; git submodule update; cd ../..
     $ npm install growl
@@ -25,4 +25,4 @@ Configure the limits and the socket endpoint at the beginning of main.js to your
 
 Create a shell geeklet and paste the following command:
 
-    cat /path/to/osx_growl_geektool_client/status
+    cat /path/to/observer/status
