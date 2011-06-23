@@ -3,10 +3,6 @@
 // configure limits.
 var limits = { '.*': [8, 12000] }
 
-// lets start with a hack. Needed to not quit, but wait for events...
-require('http').createServer(function(req, res) {})
-  .listen(1338, "127.0.0.1");
-
 var fs = require('fs');
 var io = require("./lib/node-socket.io-client/socket.io").io;
 var socket = new io.Socket('overminda.kaeuferportal.eu', {port: '8124'});
