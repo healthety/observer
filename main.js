@@ -1,11 +1,14 @@
 #!/usr/bin/env /usr/local/bin/node
 
 // configure limits.
-var limits = { '.*': [8, 12000] }
+var limits = { '.*': [8, 12000] };
+
+// configure socket Endpoint
+var socketEndpoint = 'fubar';
 
 var fs = require('fs');
 var io = require("./lib/node-socket.io-client/socket.io").io;
-var socket = new io.Socket('overminda.kaeuferportal.eu', {port: '8124'});
+var socket = new io.Socket(socketEndpoint, {port: '8124'});
 var growl = require('growl');
 
 socket.connect();
